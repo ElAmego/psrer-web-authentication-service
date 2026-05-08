@@ -5,13 +5,15 @@
   <artifactId>authentication-service</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>authentication-service</name>
+  <name>authentication-com.petproject.authservice.service</name>
 
   <properties>
     <spring.boot.version>4.1.0-RC1</spring.boot.version>
     <postgresql.driver.version>42.7.11</postgresql.driver.version>
     <liquibase.version>5.0.2</liquibase.version>
     <lombok.version>1.18.44</lombok.version>
+    <jakarta.validation.version>4.0.0-M1</jakarta.validation.version>
+    <mapstruct.version>1.6.3</mapstruct.version>
   </properties>
 
   <dependencies>
@@ -27,6 +29,13 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <version>${spring.boot.version}</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
       <version>${spring.boot.version}</version>
       <scope>compile</scope>
     </dependency>
@@ -54,10 +63,26 @@
       <version>${lombok.version}</version>
       <scope>compile</scope>
     </dependency>
+
+    <!-- Jakarta Validation -->
+    <dependency>
+      <groupId>jakarta.validation</groupId>
+      <artifactId>jakarta.validation-api</artifactId>
+      <version>${jakarta.validation.version}</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <!-- Mapstruct -->
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>${mapstruct.version}</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
 
   <build>
-    <finalName>authentication-service</finalName>
+    <finalName>authentication-com.petproject.authservice.service</finalName>
 
     <plugins>
       <plugin>
